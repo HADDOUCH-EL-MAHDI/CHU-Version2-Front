@@ -7,7 +7,6 @@ const icons = {
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
-
 const dashboard = {
     id: 'group-dashboard',
     title: 'Navigation',
@@ -15,9 +14,9 @@ const dashboard = {
     children: [
         {
             id: 'dashboard',
-            title: 'Dashboard',
+            title: 'Tableau de bord',
             type: 'item',
-            url: '/dashboard/default',
+            url: '/',
             icon: icons.DashboardOutlined,
             breadcrumbs: false
         }
