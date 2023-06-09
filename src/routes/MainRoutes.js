@@ -5,6 +5,18 @@ import Loadable from 'components/Loadable';
 import MainLayout from 'layout/MainLayout';
 import { PrivateRoute } from './PrivateRoute';
 
+//Patient
+const Identite = Loadable(lazy(() => import('../../src/DossierVert/Identite')));
+const AntiPersonnel = Loadable(lazy(() => import('../../src/DossierVert/AntiPersonnel')));
+const AntiFamiliaux = Loadable(lazy(() => import('../../src/DossierVert/AntiFamiliaux')));
+const ExamenPhysique = Loadable(lazy(() => import('../../src/DossierVert/ExamenPhysique')));
+const Paraclinique = Loadable(lazy(() => import('../../src/DossierVert/Paraclinique')));
+const DiagnosticRetenuPEC = Loadable(lazy(() => import('../../src/DossierVert/DiagnosticRetenuPEC')));
+const Suivi = Loadable(lazy(() => import('../../src/DossierVert/Suivi')));
+
+
+
+
 // render - dashboard
 const DashboardDefaultOld = Loadable(lazy(() => import('pages-old/dashboard')));
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
@@ -17,6 +29,7 @@ const Typography = Loadable(lazy(() => import('pages-old/components-overview/Typ
 const Color = Loadable(lazy(() => import('pages-old/components-overview/Color')));
 const Shadow = Loadable(lazy(() => import('pages-old/components-overview/Shadow')));
 const AntIcons = Loadable(lazy(() => import('pages-old/components-overview/AntIcons')));
+
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -61,7 +74,36 @@ const MainRoutes = {
         {
             path: 'old/icons/ant',
             element: <AntIcons />
+        },
+        { 
+            path: 'Identite',
+            element: <Identite/>
+        },
+        {
+            path: 'AntiPersonnel',
+            element: <AntiPersonnel/>
+        },
+        {
+            path: 'AntiFamiliaux',
+            element: <AntiFamiliaux/>
+        },
+        {
+            path: 'ExamenPhysique',
+            element: <ExamenPhysique/>
+        },
+        {
+            path: 'Paraclinique',
+            element: <Paraclinique/>
+        },
+        {
+            path: 'DiagnosticRetenuPEC',
+            element: <DiagnosticRetenuPEC/>
+        },
+        {
+            path: 'Suivi',
+            element: <Suivi/>
         }
+        
     ]
 };
 

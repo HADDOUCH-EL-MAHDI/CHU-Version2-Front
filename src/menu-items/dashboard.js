@@ -1,10 +1,14 @@
 // assets
-import { DashboardOutlined } from '@ant-design/icons';
+import { DashboardOutlined,HomeOutlined,PlusCircleOutlined } from '@ant-design/icons';
+
 
 // icons
 const icons = {
-    DashboardOutlined
+    DashboardOutlined,
+    HomeOutlined,
+    PlusCircleOutlined
 };
+
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
 const dashboard = {
@@ -19,8 +23,23 @@ const dashboard = {
             url: '/',
             icon: icons.DashboardOutlined,
             breadcrumbs: false
+        },
+        {
+            id: 'home',
+            title: 'Home',
+            type: 'item',
+            url: '/',
+            icon: icons.HomeOutlined,
+            breadcrumbs: false
+        },
+        {
+            id: 'Identite',
+            title: 'Ajouter patient',
+            type: 'item',
+            url: '/Identite',
+            icon: icons.PlusCircleOutlined,
+            breadcrumbs: false
         }
     ]
 };
-
 export default dashboard;
