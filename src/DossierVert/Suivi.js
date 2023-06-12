@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import { blue, purple, red } from "@mui/material/colors";
+import {purple} from "@mui/material/colors";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -20,6 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
+
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(purple[500]),
@@ -123,7 +124,7 @@ function Suivi() {
   );
 
   const [suivi, setSuivi] = useState({
-    Suivi: "",
+    suiv: "",
     Date: new Date().toISOString().slice(0, 10),
   });
 
@@ -138,12 +139,17 @@ function Suivi() {
     }
     console.log(suivi);
   };
+  
 
   const handleDataChange = (event) => {
     setSuivi({
-      ...Suivi,
-      [event.target.name]: event.target.value,
+      ...suivi,
+      suiv: event.target.value,
     });
+    // setSuivi({
+    //   ...suivi,
+    //   [event.target.name]: event.target.value,
+    // });
   };
 
   // Mettre à jour l'état "suivi" avec la date d'aujourd'hui
@@ -173,7 +179,7 @@ function Suivi() {
       text-align: left;
       padding: 6px;
     }
-  
+    
     th {
       background-color: ${
         theme.palette.mode === "dark" ? grey[900] : grey[100]
@@ -183,9 +189,9 @@ function Suivi() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1, mt: 4 }}>
+    <Box sx={{ flexGrow: 1, mt: 2}}>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={7}>
+        <Grid item xs={12} md={11}>
           <Item>
             <Box
               sx={{
@@ -207,23 +213,24 @@ function Suivi() {
                 <Box sx={{ flexGrow: 1 }}>
                   <Grid container>
                     <Grid item xs={11} md={11}>
-                      <StyledTextarea
+                      <TextareaAutosize
                         aria-label="Suivi"
                         placeholder="Suivi"
                         onChange={handleDataChange}
                         className="form-control"
-                        name="Suivi"
-                        id="Suivi"
+                        name="suiv"
+                        id="suiv"
                         sx={{ width: "100%" }}
-                        value={suivi.Suivi}
+                        value={suivi.suiv}
+                        
                       />
                     </Grid>
                   </Grid>
                 </Box>
                 <br></br>
                 <Box sx={{ flexGrow: 1 }}>
-                  <Grid container spacing={2} justifyContent="end">
-                    <Grid item xs={12} md={2}>
+                  <Grid container  justifyContent="end">
+                    <Grid item xs={12} md={1}>
                       <Stack>
                         <BootstrapButton
                           type="submet"
@@ -261,7 +268,7 @@ function Suivi() {
                           </thead>
                           <tbody>
                             <tr>
-                              <td>{suivi.Suivi}</td>
+                              <td>{suivi.suiv}</td>
                               <td>{suivi.Date}</td>
                             </tr>
                           </tbody>

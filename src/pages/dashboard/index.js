@@ -13,6 +13,12 @@ const DashboardDefault = () => {
             <Grid item xs={12} sx={{ mb: -2.25 }}>
                 <Typography variant="h5"></Typography>
                 <Typography variant="h5"></Typography>
+                <Typography variant="h5"></Typography>
+                <Typography variant="h5"></Typography>
+                <Typography variant="h5"></Typography>
+                <Typography variant="h5"></Typography>
+                <Typography variant="h5"></Typography>
+                <Typography variant="h5"></Typography>
                 <Typography ></Typography>
             </Grid> 
         </Grid>

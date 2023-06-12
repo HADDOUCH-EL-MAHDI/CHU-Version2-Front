@@ -79,6 +79,30 @@ const DashboardDefault = () => {
             <Grid item xs={12} sx={{ mb: -2.25 }}>
                 <Typography variant="h5">Dashboard</Typography>
             </Grid>
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">Home</Typography>
+            </Grid>
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">Ajouter Patient</Typography>
+            </Grid>
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">AntiPersonnel</Typography>
+            </Grid>
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">AntiFamiliaux</Typography>
+            </Grid> 
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">Paraclinique</Typography>
+            </Grid> 
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">ExamenPhysique</Typography>
+            </Grid> 
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">DiagnosticRetenuPEC</Typography>
+            </Grid> 
+            <Grid item xs={12} sx={{ mb: -2.25 }}>
+                <Typography variant="h5">Suivi</Typography>
+            </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
                 <AnalyticEcommerce title="Total Page Views" count="4,42,236" percentage={59.3} extra="35,000" />
             </Grid>

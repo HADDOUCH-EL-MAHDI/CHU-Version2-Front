@@ -138,9 +138,9 @@ function ExamenPhysique() {
       
 
   return (
-    <Box sx={{ flexGrow: 1, mt: 4 }}>
+    <Box sx={{ flexGrow: 1, mt: 2 }}>
       <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={11}>
           <Item>
             <Box
               sx={{
@@ -521,7 +521,7 @@ function ExamenPhysique() {
                 <br></br>
                 <Box sx={{ flexGrow: 1 }}>
                   <Grid container spacing={2} justifyContent="end">
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={2}>
                     <Stack spacing={2} direction="row" >
                         <ColorButton
                           type="reset"
